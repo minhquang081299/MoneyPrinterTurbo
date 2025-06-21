@@ -11,6 +11,7 @@ config_file = f"{root_dir}/config.toml"
 
 def load_config():
     # fix: IsADirectoryError: [Errno 21] Is a directory: '/MoneyPrinterTurbo/config.toml'
+    
     if os.path.isdir(config_file):
         shutil.rmtree(config_file)
 
@@ -42,7 +43,7 @@ def save_config():
 
 
 _cfg = load_config()
-app = _cfg.get("app", {})
+app:dict = _cfg.get("app", {})
 whisper = _cfg.get("whisper", {})
 proxy = _cfg.get("proxy", {})
 azure = _cfg.get("azure", {})

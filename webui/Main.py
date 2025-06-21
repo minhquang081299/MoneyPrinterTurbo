@@ -544,6 +544,7 @@ with middle_panel:
             (tr("Pexels"), "pexels"),
             (tr("Pixabay"), "pixabay"),
             (tr("Local file"), "local"),
+            (tr("Private file"), "private"),
             (tr("TikTok"), "douyin"),
             (tr("Bilibili"), "bilibili"),
             (tr("Xiaohongshu"), "xiaohongshu"),
@@ -606,6 +607,7 @@ with middle_panel:
         video_aspect_ratios = [
             (tr("Portrait"), VideoAspect.portrait.value),
             (tr("Landscape"), VideoAspect.landscape.value),
+            (tr("Square"), VideoAspect.square.value),
         ]
         selected_index = st.selectbox(
             tr("Video Ratio"),
@@ -916,7 +918,7 @@ if start_button:
         scroll_to_bottom()
         st.stop()
 
-    if params.video_source not in ["pexels", "pixabay", "local"]:
+    if params.video_source not in ["pexels", "pixabay", "local", "private"]:
         st.error(tr("Please Select a Valid Video Source"))
         scroll_to_bottom()
         st.stop()

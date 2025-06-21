@@ -57,10 +57,10 @@ class VideoParams(BaseModel):
     """
     {
       "video_subject": "",
-      "video_aspect": "横屏 16:9（西瓜视频）",
-      "voice_name": "女生-晓晓",
+      "video_aspect": "Landscape 16:9 (Xigua Video)",
+      "voice_name": "Female-Xiaoxiao",
       "bgm_name": "random",
-      "font_name": "STHeitiMedium 黑体-中",
+      "font_name": "STHeitiMedium",
       "text_color": "#FFFFFF",
       "font_size": 60,
       "stroke_color": "#000000",
@@ -140,13 +140,13 @@ class AudioRequest(BaseModel):
 class VideoScriptParams:
     """
     {
-      "video_subject": "春天的花海",
+      "video_subject": "Enter subject",
       "video_language": "",
       "paragraph_number": 1
     }
     """
 
-    video_subject: Optional[str] = "春天的花海"
+    video_subject: Optional[str] = "Enter subject"  # Enter subject
     video_language: Optional[str] = ""
     paragraph_number: Optional[int] = 1
 
@@ -160,9 +160,9 @@ class VideoTermsParams:
     }
     """
 
-    video_subject: Optional[str] = "春天的花海"
+    video_subject: Optional[str] = "Enter subject"
     video_script: Optional[str] = (
-        "春天的花海，如诗如画般展现在眼前。万物复苏的季节里，大地披上了一袭绚丽多彩的盛装。金黄的迎春、粉嫩的樱花、洁白的梨花、艳丽的郁金香……"
+        "The sea of flowers in spring unfolds like a poetic painting before your eyes. In this season of revival, the earth is adorned with a splendid and colorful dress. Golden forsythia, pink cherry blossoms, pure white pear flowers, and gorgeous tulips..."
     )
     amount: Optional[int] = 5
 
